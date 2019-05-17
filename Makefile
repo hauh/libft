@@ -6,7 +6,7 @@
 #    By: smorty <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/04 18:46:34 by smorty            #+#    #+#              #
-#    Updated: 2019/04/14 19:56:11 by smorty           ###   ########.fr        #
+#    Updated: 2019/04/15 21:15:12 by smorty           ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -20,10 +20,8 @@ FLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
-%.o: %.c
-	gcc $(FLAGS) -c $(SRC) $< -I libft.h
-
-$(NAME): %.o
+$(NAME):
+	gcc $(FLAGS) -c $(SRC) -I libft.h
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
