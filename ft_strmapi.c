@@ -6,7 +6,7 @@
 /*   By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 15:58:06 by smorty            #+#    #+#             */
-/*   Updated: 2019/05/17 23:09:55 by smorty           ###   ########.fr       */
+/*   Updated: 2019/05/18 18:10:49 by smorty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	char			*fresh;
+	size_t	i;
+	char	*fresh;
 
 	if (!s || !f)
 		return (NULL);

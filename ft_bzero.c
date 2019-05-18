@@ -6,7 +6,7 @@
 /*   By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 21:55:24 by smorty            #+#    #+#             */
-/*   Updated: 2019/05/17 21:34:56 by smorty           ###   ########.fr       */
+/*   Updated: 2019/05/18 18:01:05 by smorty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	unsigned char *sc;
 
-	sc = s;
+	sc = (unsigned char *)s;
 	while (n)
 	{
 		--n;

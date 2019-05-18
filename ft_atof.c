@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/11 15:22:48 by smorty            #+#    #+#             */
-/*   Updated: 2019/05/18 16:10:08 by smorty           ###   ########.fr       */
+/*   Created: 2019/05/18 17:48:28 by smorty            #+#    #+#             */
+/*   Updated: 2019/05/18 17:56:32 by smorty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr_fd(int n, int fd)
+double	ft_atof(const char *s)
 {
-	long tmp;
+	double	n;
+	double	d;
+	int		sign;
 
-	if (!n)
-		write(fd, "0", 1);
-	else
+	while ((*s >= 9 && *s <= 13) || *s == 32)
+		++s;
+	sign = (*s == '-' ? -1 : 1);
+	if (*s == '-' || *s == '+')
+		++s;
+	n = 0;
+	while (*s >= '0' && *s <= '9')
 	{
-		tmp = (n < 0) ? -1 : 1;
-		while (n)
-		{
-			tmp = tmp * 10 + n % 10;
-			n /= 10;
-		}
-		if (tmp < 0)
-		{
-			write(fd, "-", 1);
-			tmp = ~tmp + 1;
-		}
-		while (tmp != 1)
-		{
-			n = tmp % 10 + '0';
-			write(fd, &n, 1);
-			tmp /= 10;
-		}
+		n = n * 10 + (*s - '0');
+		++s;
 	}
+	if (*s == '.')
+		++s;
+	d = 10;
+	while (*s >= '0' && *s <= '9')
+	{
+		n += (*s - '0') / d;
+		d *= 10;
+		++s;
+	}
+	return (n * sign);
 }
