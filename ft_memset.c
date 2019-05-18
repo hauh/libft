@@ -6,7 +6,7 @@
 /*   By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:01:47 by smorty            #+#    #+#             */
-/*   Updated: 2019/05/17 20:59:29 by smorty           ###   ########.fr       */
+/*   Updated: 2019/05/18 18:04:50 by smorty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char *sc;
 
-	sc = s;
+	sc = (unsigned char *)s;
 	while (n)
 	{
 		--n;

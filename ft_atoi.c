@@ -6,7 +6,7 @@
 /*   By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 15:05:46 by smorty            #+#    #+#             */
-/*   Updated: 2019/05/17 22:44:11 by smorty           ###   ########.fr       */
+/*   Updated: 2019/05/18 18:00:45 by smorty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int		ft_atoi(char const *s)
 			return (sign > 0 ? -1 : 0);
 		++s;
 	}
-	return (n * sign);
+	return ((int)(n * sign));
 }

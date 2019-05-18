@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smorty <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 20:54:28 by smorty            #+#    #+#             */
-/*   Updated: 2019/04/13 19:09:48 by smorty           ###   ########.fr       */
+/*   Updated: 2019/05/18 17:53:02 by smorty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,10 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strtrim(char const *s);
+char			*ft_strtrimc(char const *s, char c);
 char			**ft_strsplit(char const *s, char c);
 int				ft_atoi(char const *s);
+double			ft_atof(const char *s);
 char			*ft_strsub(char const *s, unsigned int start, size_t n);
 char			*ft_strcapitalize(char *s);
 /*

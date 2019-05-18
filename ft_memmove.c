@@ -6,7 +6,7 @@
 /*   By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 19:35:37 by smorty            #+#    #+#             */
-/*   Updated: 2019/05/17 21:49:40 by smorty           ###   ########.fr       */
+/*   Updated: 2019/05/18 18:04:28 by smorty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 	if (src != dst)
 	{
-		d = dst;
+		d = (char *)dst;
 		s = (char *)src;
 		if (src > dst)
 			while (n)
