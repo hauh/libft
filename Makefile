@@ -6,7 +6,7 @@
 #    By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/04 18:46:34 by smorty            #+#    #+#              #
-#    Updated: 2019/08/07 20:48:54 by smorty           ###   ########.fr        #
+#    Updated: 2019/08/07 21:18:03 by smorty           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,9 +33,11 @@ FLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
+	@ar -rcs $(NAME) $(OBJ)
+	@printf "\r\e[Jar \e[32m$@\e[0m"
 	@ranlib $(NAME)
-	@printf "\r\e[J\e[32mlibft.a\e \e[0mdone!\n\e[?25h"
+	@printf "\r\e[Jranlib \e[32m$@\e[0m"
+	@printf "\r\e[J\e[32m$@\e[0m done!\n\e[?25h"
 
 %.o: %.c
 	@printf "\r\e[?25l\e[Jcompiling \e[32m$^\e[0m"
