@@ -6,7 +6,7 @@
 #    By: smorty <smorty@student.21school.ru>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/04 18:46:34 by smorty            #+#    #+#              #
-#    Updated: 2019/05/18 17:24:03 by smorty           ###   ########.fr        #
+#    Updated: 2019/08/07 20:43:33 by smorty           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,11 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@ranlib $(NAME)
+	@printf "\r\e[J\e[32mlibft.a\e \e[0mdone!\n\e[?25h"
 
 %.o: %.c
+	@printf "\r\e[?25l\e[Jcompiling \e[32m$^\e[0m"
 	@gcc $(FLAGS) -c $<
 
 clean:
